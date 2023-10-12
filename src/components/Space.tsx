@@ -1,13 +1,7 @@
-export interface SpaceProps {
-  ship: {
-    image: string;
-    name: string;
-    type: string;
-  };
-}
+import { Ship } from "../graphql/__generated__/graphql";
 
-const Space: React.FC<SpaceProps> = ({ ship }) => {
-  const { image, name, type } = ship;
+const Space = ({ ship }: { ship: Ship }) => {
+  const { image, name, type } = ship!;
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">

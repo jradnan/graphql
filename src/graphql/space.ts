@@ -1,7 +1,7 @@
-import { gql } from "@apollo/client";
+import { gql } from "./__generated__";
 
-export const GET_DATA = gql`
-  query Query {
+export const GET_DATA = gql(`
+  query Adnan {
     ships {
       image
       id
@@ -9,4 +9,14 @@ export const GET_DATA = gql`
       type
     }
   }
-`;
+`);
+
+export const GET_FAN = gql(
+  `query Fan {
+    rockets {
+      id
+      name
+    }
+  }
+  `
+);
